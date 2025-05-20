@@ -12,6 +12,6 @@ struct SavingsGoal: Identifiable{
     let targetAmount: Double
     var currentAmount: Double = 0.0
     var progress: Double{
-        currentAmount / targetAmount
+        currentAmount / targetAmount 
     }
 }

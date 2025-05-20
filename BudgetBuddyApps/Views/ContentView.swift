@@ -9,7 +9,7 @@ import SwiftUI
 
 
 
-@main
+
 struct BudgetBuddyApps: App {
     var body: some Scene {
         WindowGroup {
@@ -26,15 +26,15 @@ struct ContentView: View {
                     Label("Expenses", systemImage: "creditcard")
                 }
 
-            SavingsGoalsView()
-                .tabItem {
-                    Label("Goals", systemImage: "target")
-                }
-
-            ReminderSettingsView()
-                .tabItem {
-                    Label("Reminders", systemImage: "bell")
-                }
+//            SavingsGoalsView()
+//                .tabItem {
+//                    Label("Goals", systemImage: "target")
+//                }
+//
+//            ReminderSettingsView()
+//                .tabItem {
+//                    Label("Reminders", systemImage: "bell")
+//                }
         }
     }
 }
