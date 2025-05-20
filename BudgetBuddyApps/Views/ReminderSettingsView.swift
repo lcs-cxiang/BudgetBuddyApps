@@ -18,7 +18,18 @@ struct ReminderSettingsView: View {
                     Toggle("Enable reminders", isOn: $remindersEnabled)
                     DatePicker("Time", selection: $reminderTime, displayedComponents: .hourAndMinute) //ChatGPT
                 }
+                .navigationTitle("Reminders")
             }
         }
     }
 }
+#Preview {
+    ReminderSettingsView()
+}
+
+class DataStore: ObservableObject {
+    @Published var expenses: [Expense] = []
+    @Published var goals: [SavingsGoal] = []
+}
+
+
