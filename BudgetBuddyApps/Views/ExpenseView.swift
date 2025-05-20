@@ -11,6 +11,10 @@ struct ExpenseView: View {
     @State private var name = ""
     @State private var amount = ""
     
+    var total: Double {
+            expenses.reduce(0) { $0 + $1.amount }
+        } //ChatGPT
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -26,7 +30,16 @@ struct ExpenseView: View {
                         }
                     }
                 }.padding()
-
+                
+                HStack {
+                        Text("Total:")
+                        .font(.headline)
+                        Spacer()
+                        Text("$\(total, specifier: "%.2f")")
+                        .font(.headline)
+                                }
+                                .padding(.horizontal)
+                
                 List(expenses) { item in
                     HStack {
                         Text(item.name)

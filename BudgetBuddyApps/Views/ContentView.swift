@@ -31,10 +31,10 @@ struct ContentView: View {
 //                    Label("Goals", systemImage: "target")
 //                }
 //
-//            ReminderSettingsView()
-//                .tabItem {
-//                    Label("Reminders", systemImage: "bell")
-//                }
+            ReminderSettingsView()
+                .tabItem {
+                    Label("Reminders", systemImage: "bell")
+                }
         }
     }
 }
